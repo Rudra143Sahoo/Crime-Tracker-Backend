@@ -1,0 +1,702 @@
+/* General Reset & Base Styles */
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f0f2f5; /* Facebook-like light gray */
+    color: #050505; /* Primary dark text color */
+}
+
+/* Hide scrollbar but allow scrolling */
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+}
+body {
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+/* --- Header Section (Navbar) --- */
+.navbar {
+    background-color: #fff;
+    padding: 8px 16px; /* Adjusted padding */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* Distribute content */
+    align-items: center;
+    border-bottom: 1px solid #dddfe2;
+    height: 56px; /* Fixed height for consistent navbar */
+    box-sizing: border-box; /* Include padding in height */
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.site-title {
+    font-size: 24px; /* Slightly smaller than previous 'nav-title' */
+    font-weight: 700;
+    color: #1877f2; /* Facebook blue */
+    cursor: pointer;
+    margin-right: 16px; /* Space before search bar */
+}
+
+/* Icon Placeholder Styles (for your `<i>` tags like icon-gavel) */
+.icon-gavel, .icon-search, .icon-bell, .icon-home, .icon-user, .icon-explore, .icon-map, .icon-stats {
+    display: inline-block;
+    width: 20px; /* Placeholder width for icons */
+    height: 20px; /* Placeholder height for icons */
+    line-height: 1; /* For vertical alignment */
+    text-align: center;
+    font-size: 20px; /* Default icon size */
+    color: #65676b; /* Default icon color */
+    /* Add specific icon background/font if you were using an icon font without a library */
+    /* Example for a solid icon: background-color: #65676b; -webkit-mask: url('path/to/icon.svg') no-repeat 50% 50%; mask: url('path/to/icon.svg') no-repeat 50% 50%; */
+}
+
+.search-bar {
+    flex-grow: 1; /* Allows it to take available space */
+    max-width: 400px; /* Max width for the search bar */
+    position: relative;
+    display: flex; /* To align input and icon */
+    align-items: center;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 16px 10px 40px; /* Adjusted padding for icon */
+    border: none;
+    border-radius: 20px;
+    background-color: #f0f2f5;
+    font-size: 15px;
+    color: #050505;
+    outline: none;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05); /* Subtle inner shadow */
+    transition: background-color 0.2s ease, width 0.2s ease-in-out;
+}
+
+.search-input:focus {
+    background-color: #e4e6eb;
+}
+
+.search-bar .icon-search {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px; /* Smaller for search icon */
+    color: #65676b;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Spacing between right-side buttons */
+    margin-left: 16px; /* Space from search bar */
+}
+
+.notification-btn,
+.profile-btn {
+    padding: 8px;
+    border-radius: 50%; /* Circular buttons */
+    background-color: #e4e6eb; /* Light gray background */
+    border: none;
+    cursor: pointer;
+    color: #050505; /* Dark icon color */
+    font-size: 18px; /* Icon size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: background-color 0.2s ease;
+}
+
+.notification-btn:hover,
+.profile-btn:hover {
+    background-color: #d2d2d2; /* Darker gray on hover */
+}
+
+.profile-btn {
+    border-radius: 20px; /* Pill shape for profile button */
+    padding: 6px 12px 6px 6px; /* Adjust padding for image and text */
+    gap: 8px;
+}
+
+.profile-img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #050505;
+    white-space: nowrap; /* Prevent name from wrapping */
+    margin-right: 4px; /* Space from right edge */
+}
+
+.notification-badge {
+    position: absolute;
+    top: -2px; /* Adjusted position */
+    right: -2px; /* Adjusted position */
+    background-color: #f02849; /* Facebook red */
+    color: white;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 9999px; /* Pill shape */
+    font-weight: 600;
+    line-height: 1; /* Ensures text sits correctly */
+}
+
+/* --- Main Container (Three Column Layout) --- */
+.main-container {
+    display: flex;
+    justify-content: center; /* Center the entire layout */
+    width: 100%;
+    max-width: 1300px; /* Max width for the whole page content */
+    margin: 16px auto; /* Margin from top and auto for centering */
+    padding: 0 16px; /* Padding on sides for smaller screens */
+    gap: 20px; /* Spacing between columns */
+    box-sizing: border-box;
+}
+
+/* --- Left Sidebar --- */
+.sidebar-left {
+    flex-basis: 360px; /* Fixed width for left sidebar */
+    flex-shrink: 0; /* Prevent shrinking */
+    margin-top: 0; /* No top margin as it's part of main-container */
+    padding-right: 16px; /* Space between sidebar and main content */
+    position: sticky;
+    top: 72px; /* Offset from top to clear fixed navbar + some space */
+    height: calc(100vh - 72px); /* Adjust height to fit viewport minus navbar */
+    overflow-y: auto; /* Enable scrolling for sidebar content */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+.sidebar-left::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+}
+
+
+.nav-list {
+    list-style: none;
+    padding: 8px 0; /* Padding inside the list container */
+    margin: 0;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 16px; /* Space below this block */
+}
+
+.nav-list li {
+    margin-bottom: 4px; /* Space between list items */
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px; /* Padding for each item */
+    text-decoration: none;
+    color: #050505;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.nav-item:hover {
+    background-color: #f0f2f5; /* Light gray on hover */
+}
+
+/* Adjust icon sizes within nav items if needed */
+.nav-item .icon-home, .nav-item .icon-user, .nav-item .icon-explore, .nav-item .icon-map, .nav-item .icon-stats {
+    font-size: 20px; /* Larger icons for sidebar */
+    color: #65676b; /* Consistent icon color */
+}
+
+.quick-links {
+    padding: 16px 0; /* Padding for the quick links section */
+    border-top: 1px solid #dddfe2; /* Separator line */
+    margin-top: 16px;
+    background-color: #fff; /* Match card background */
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+}
+
+.quick-links h3 {
+    margin: 0 0 12px 0;
+    font-size: 16px;
+    color: #65676b;
+    font-weight: 600;
+}
+
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quick-links li {
+    margin-bottom: 8px;
+}
+
+.quick-links a {
+    text-decoration: none;
+    color: #050505;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.quick-links a:hover {
+    color: #1877f2;
+}
+
+/* --- Main Content (Feed) --- */
+.content {
+    flex-grow: 1; /* Allows it to take remaining space */
+    max-width: 600px; /* Max width for the feed column */
+    padding: 0 16px; /* Padding for main content */
+    box-sizing: border-box;
+}
+
+.post-box {
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+    text-align: center; /* Center the h2 */
+}
+
+.post-box h2 {
+    font-size: 18px;
+    color: #050505;
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.post-box .post-title,
+.post-box .post-details,
+.post-box .post-image-url {
+    width: calc(100% - 32px); /* Account for padding */
+    padding: 10px 16px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #f0f2f5;
+    font-size: 15px;
+    color: #050505;
+    outline: none;
+    resize: vertical; /* Allow vertical resize for textarea */
+    box-sizing: border-box;
+    transition: background-color 0.2s ease;
+}
+
+.post-box .post-details {
+    min-height: 80px; /* Minimum height for textarea */
+}
+
+.post-box input:focus,
+.post-box textarea:focus {
+    background-color: #e4e6eb;
+}
+
+.post-box .post-btn {
+    width: 100%;
+    background-color: #1877f2;
+    color: white;
+    font-weight: 700;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-box .post-btn:hover {
+    background-color: #155db2;
+    box-shadow: 0 2px 4px rgba(24, 119, 242, 0.4);
+}
+
+.feed {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Space between posts */
+}
+
+.feed-post {
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    font-size: 15px;
+    color: #050505;
+}
+
+.feed-post .post-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.feed-post .post-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.feed-post .post-author {
+    font-weight: 600;
+    color: #050505;
+    margin: 0;
+    font-size: 15px;
+}
+
+.feed-post .post-time {
+    font-size: 13px;
+    color: #65676b;
+    margin: 0;
+}
+
+.feed-post .post-heading {
+    font-size: 18px; /* Slightly larger for main heading */
+    font-weight: 700;
+    color: #050505;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.feed-post .post-text {
+    line-height: 1.5;
+    margin-bottom: 12px;
+    color: #1c1e21; /* Darker for main content text */
+}
+
+.feed-post .post-img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    margin: 12px 0; /* Space around image */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+}
+
+.feed-post .post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #65676b;
+    font-size: 14px;
+    font-weight: 500;
+    padding-top: 8px;
+    border-top: 1px solid #dddfe2;
+}
+
+/* --- Right Sidebar --- */
+.sidebar-right {
+    flex-basis: 360px; /* Fixed width for right sidebar */
+    flex-shrink: 0; /* Prevent shrinking */
+    margin-top: 0;
+    padding-left: 16px; /* Space from main content */
+    position: sticky;
+    top: 72px; /* Offset from top to clear fixed navbar + some space */
+    height: calc(100vh - 72px);
+    overflow-y: auto;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+.sidebar-right::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+}
+
+
+.sidebar-right h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #65676b;
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding: 0 8px; /* Slight padding for headings */
+}
+
+.related-case {
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.related-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+}
+
+.related-case div {
+    flex-grow: 1; /* Allow details to take space */
+}
+
+.related-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #050505;
+    margin: 0 0 4px 0;
+}
+
+.related-text {
+    font-size: 13px;
+    color: #65676b;
+    margin: 0 0 8px 0;
+}
+
+.related-link {
+    font-size: 14px;
+    color: #1877f2;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.related-link:hover {
+    text-decoration: underline;
+}
+
+.trending-topics {
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+}
+
+.trending-topics h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #65676b;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.trending-topics ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.trending-topics li {
+    font-size: 14px;
+    color: #050505;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.trending-topics li:hover {
+    color: #1877f2;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1200px) {
+    .main-container {
+        max-width: 960px; /* Reduce max-width for slightly smaller desktops */
+        gap: 16px;
+    }
+    .sidebar-left, .sidebar-right {
+        flex-basis: 280px; /* Reduce sidebar width */
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+    .content {
+        max-width: 500px; /* Adjust main content width */
+    }
+}
+
+@media (max-width: 1024px) {
+    .sidebar-left {
+        display: none; /* Hide left sidebar */
+    }
+    .main-container {
+        justify-content: center; /* Center the remaining two columns */
+        gap: 16px;
+    }
+    .content {
+        max-width: 600px; /* Main content can be wider now */
+    }
+    .navbar .search-bar {
+        max-width: 300px; /* Limit search bar width */
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar-right {
+        display: none; /* Hide right sidebar */
+    }
+    .main-container {
+        padding: 0 8px; /* More padding on smaller screens */
+    }
+    .content {
+        width: 100%; /* Full width for main content */
+        padding: 0; /* Remove internal padding if full width */
+    }
+    .navbar {
+        padding: 8px;
+    }
+    .site-title {
+        font-size: 20px;
+    }
+    .navbar .search-bar {
+        display: none; /* Hide search bar on very small screens, often replaced by an icon */
+    }
+    .navbar-right .profile-name {
+        display: none; /* Hide profile name */
+    }
+    .navbar-right .profile-btn {
+        border-radius: 50%; /* Make profile button circular */
+        padding: 8px;
+    }
+    .notification-btn,
+    .profile-btn {
+        font-size: 16px; /* Smaller icons/buttons */
+    }
+}
+/* changes */
+/* --- New Post Box (Updated to match "What's on your mind?" with simplified names) --- */
+.post-wrap {
+    background-color: #fff;
+    padding: 12px 16px; /* Reduced vertical padding */
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+    font-size: 15px;
+    color: #050505;
+}
+
+.post-head {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Closer gap between avatar and input */
+    margin-bottom: 8px; /* Space above separator */
+}
+
+.post-head .post-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-head .post-input {
+    flex-grow: 1;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 20px; /* Pill shape */
+    background-color: #f0f2f5;
+    font-size: 16px;
+    color: #65676b; /* Lighter text for placeholder */
+    outline: none;
+    cursor: pointer; /* Indicate it's clickable */
+    transition: background-color 0.2s ease;
+    /* To make it behave like an input that expands to a modal */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.post-head .post-input:hover {
+    background-color: #e4e6eb;
+}
+
+.post-sep {
+    border-top: 1px solid #dddfe2;
+    margin: 8px 0; /* Space above and below separator */
+}
+
+.post-opts {
+    display: flex;
+    justify-content: space-around; /* Distribute items evenly */
+    align-items: center;
+    margin-top: 8px; /* Space above options */
+}
+
+.post-btn { /* This class is now used for all option buttons */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    color: #65676b; /* Gray text for options */
+    transition: background-color 0.2s ease;
+    flex-grow: 1; /* Make buttons expand */
+    justify-content: center; /* Center content within button */
+}
+
+.post-btn:hover {
+    background-color: #f0f2f5;
+}
+
+.post-btn i { /* Targeting icons within these buttons */
+    font-size: 20px; /* Size for icons */
+}
+
+/* Ensure post-file-input remains hidden */
+.post-file-input {
+    display: none;
+}
+.login-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s ease-in-out;
+}
+
+.login-btn:hover {
+    background-color: #2980b9;
+}
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+    background-color: #e74c3c; /* red tone for logout */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+.logout-btn:hover {
+    background-color: #c0392b; /* darker red on hover */
+}
+

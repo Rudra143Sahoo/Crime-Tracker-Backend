@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Justice Files</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <img src="./images/logo.png" class=" brand-logo" alt="">
+    <ul class="nav-links">
+  <li class="nav-items dropdown">
+    <a href="#">Categories ▼</a>
+
+    <ul class="dropdown-menu">
+      <li><a href="#">Murder</a></li>
+      <li><a href="#">Rape</a></li>
+      <li><a href="#">Cyber Crime</a></li>
+      <li><a href="#">Robbery</a></li>
+      <li><a href="#">Kidnapping</a></li>
+    </ul>
+  </li>
+   <li class="nav-items"><a href="#running-cases">RunningCase</a></li>
+  <li class="nav-items"><a href="#pending-cases">PendingCase</a></li>
+  <li class="nav-items"><a href="#closed-cases">ClosedCase</a></li>
+</ul>
+
+
+    <div class="right-container">
+      <input type="text" class="search-box" placeholder="search">
+      <button class="Subscribe">Search</button>
+      <!-- <button class="login-btn">Login</button> -->
+
+      <a href="login.html" class="login-btn">Login</a>
+    </div>
+  </nav>
+
+
+  <div class="carousel-container">
+    <div class="carousel">
+       
+    </div>
+  </div>
+
+  <div class="video-card-container">
+
+   <div class="video-card">
+    <h3>NDTV Crime News</h3>
+    <a href="https://www.ndtv.com/india/crime" target="_blank">
+      <img src="./images/ndtv.png" class="video-card-image" alt="NDTV logo">
+    </a>
+  </div> 
+  
+
+  <div class="video-card">
+    <h3>India Today Crime Reports</h3>
+    <a href="https://www.indiatoday.in/crime" target="_blank">
+      <img src="./images/indiatoday.jpg" class="video-card-image" alt="India Today logo">
+    </a>
+  </div>
+
+  <div class="video-card">
+    <h3>Crime Tak (Aaj Tak)</h3>
+    <a href="https://www.aajtak.in/crime" target="_blank">
+      <img src="./images/ajtak.jpeg" class="video-card-image" alt="Crime Tak logo">
+    </a>
+  </div>
+  <!-- <a href="https://www.aajtak.in/crime" target="_blank">
+  <div class="video-card">
+    <h3>Crime Tak (Aaj Tak)</h3>
+    <img src="./images/ajtak.jpeg" class="video-card-image" alt="Crime Tak logo">
+  </div>
+</a> -->
+
+
+  <div class="video-card">
+    <h3>Zee News Crime</h3>
+    <a href="https://zeenews.india.com/crime" target="_blank">
+      <img src="./images/zeenews.jpeg" class="video-card-image" alt="Zee News logo">
+    </a>
+  </div>
+
+  <div class="video-card">
+    <h3>ABP News Crime</h3>
+    <a href="https://news.abplive.com/crime-news" target="_blank">
+      <img src="./images/abp.png" class="video-card-image" alt="ABP News logo">
+    </a>
+  </div>
+
+</div>
+
+
+
+  
+
+  <h1 class="title" id="running-cases">Running cases</h1>
+  <div class="movies-list">
+    <a href="#"></a>
+    <button class="pre-btn"><img src="pre.png" alt=""></button>
+    <button class="nxt-btn"><img src="nxt.png" alt=""></button>
+    
+    <div class="card-container">
+
+  <!-- Crime Case 1 -->
+  <div class="card" onclick="goToDetails('684050f2363dbcb7b3d8d86f')">
+    <img src="images/poster1.png" alt="Crime Scene" class="card-img">
+    <div class="card-body">
+     <!-- <img src="images/missing1.jpg" alt="Crime Thumbnail">-->
+      <h2 class="name">Bank Robbery</h2>
+      <h6 class="des">Masked gang robbed a central bank in daylight.</h6>
+      <button class="watchlist-btn">Add to Watchlist</button>
+    </div>
+  </div>
+
+  <!-- Crime Case 2 -->
+  <div class="card" onclick="goToDetails('68405b9a363dbcb7b3d8d873')">
+    <img src="images/poster2.png" alt="Crime Scene" class="card-img">
+    <div class="card-body">
+      <!-- <img src="images/missing2.jpg" alt="Crime Thumbnail"> -->
+      <h2 class="name">Cyber Fraud</h2>
+      <h6 class="des">Scammer hacked 200+ accounts via phishing emails.</h6>
+      <button class="watchlist-btn">Add to Watchlist</button>
+    </div>
+  </div>
+
+  <!-- Crime Case 3 -->
+  <div class="card" onclick="goToDetails('68413e5ca6301c3fce38ab0d')">
+    <img src="images/poster3.png" alt="Crime Scene" class="card-img">
+    <div class="card-body">
+      <!-- <img src="images/missing3.jpg" alt="Crime Thumbnail"> -->
+      <h2 class="name">Hit and Run</h2>
+      <h6 class="des">Victim injured in a late-night highway accident.</h6>
+      <button class="watchlist-btn">Add to Watchlist</button>
+    </div>
+  </div>
+
+   <div class="card" onclick="goToDetails('68413e0fa6301c3fce38ab0c')">
+      <img src="images/phisingimg.png" alt="Jamtara Scam" class="card-img">
+      <div class="card-body">
+        <h2 class="name">Jamtara Phishing Scam</h2>
+        <h6 class="des">A group from Jharkhand tricked thousands via fake OTP and KYC calls.</h6>
+        <button class="watchlist-btn">View Details</button>
+      </div>
+    </div>
+
+    <div class="card" onclick="goToDetails('68413daca6301c3fce38ab0b')">
+      <img src="images/simswap.jpg" alt="SIM Swap Fraud" class="card-img">
+      <div class="card-body">
+        <h2 class="name">SIM Swap Bank Fraud</h2>
+        <h6 class="des">Fraudsters cloned SIM cards to access bank OTPs & loot customer accounts.</h6>
+        <button class="watchlist-btn">View Details</button>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    
+    
+    
+        
+
+       <div class="card" onclick="goToDetails('68413c7da6301c3fce38ab0a')">
+      <img src="images/rape.jpg" alt="Delhi Case 2012" class="card-img">
+      <div class="card-body">
+        <h2 class="name">Delhi Gang Rape (2012)</h2>
+        <h6 class="des">A brutal case that led to nationwide protests and legal reforms.</h6>
+        <button class="watchlist-btn">View Details</button>
+      </div>
+    </div>
+
+    <div class="card" onclick="goToDetails('68413c34a6301c3fce38ab09')">
+      <img src="images/khatuarape.jpg" alt="Kathua Case" class="card-img">
+      <div class="card-body">
+        <h2 class="name">Kathua Case (2018)</h2>
+        <h6 class="des">An 8-year-old girl was gang-raped and murdered in Jammu & Kashmir.</h6>
+        <button class="watchlist-btn">View Details</button>
+      </div>
+    </div>
+
+      <div class="card" onclick="goToDetails('68413bf2a6301c3fce38ab08')">
+      <img src="images/sheenamurder.jpg" alt="Sheena Bora Case" class="card-img">
+      <div class="card-body">
+        <h2 class="name">Sheena Bora Murder</h2>
+        <h6 class="des">A high-profile case involving the murder of Sheena by her mother Indrani Mukerjea.</h6>
+        <button class="watchlist-btn">View Details</button>
+      </div>
+    </div>
+
+    <div class="card" onclick="goToDetails('68413ba2a6301c3fce38ab07')">
+      <img src="images/arushimurder.jpg" alt="Aarushi Case" class="card-img">
+      <div class="card-body">
+        <h2 class="name">Aarushi-Hemraj Double Murder</h2>
+        <h6 class="des">Controversial case involving a teenager and domestic help in Noida.</h6>
+        <button class="watchlist-btn">View Details</button>
+      </div>
+    </div>
+
+      <div class="card" onclick="goToDetails('68413b47a6301c3fce38ab06')">
+      <img src="images/atmrobbery.jpg" alt="Chennai ATM Heist" class="card-img">
+      <div class="card-body">
+        <h2 class="name">Chennai ATM Robbery</h2>
+        <h6 class="des">Rs. 1.9 crore stolen using gas cutters and advanced techniques.</h6>
+        <button class="watchlist-btn">View Details</button>
+      </div>
+    </div>
+
+    <div class="card" onclick="goToDetails('68413ad2a6301c3fce38ab05')">
+      <img src="images/goldheist.jpg" alt="Telangana Gold Heist" class="card-img">
+      <div class="card-body">
+        <h2 class="name">Hyderabad Gold Heist</h2>
+        <h6 class="des">Armed robbers looted gold worth crores in daylight in 2021.</h6>
+        <button class="watchlist-btn">View Details</button>
+      </div>
+    </div>
+
+      <div class="card" onclick="goToDetails('68410ae50243e93bb64fe6f9')">
+      <img src="images/sonabducted.jpg" alt="Abduction of Viren" class="card-img">
+      <div class="card-body">
+        <h2 class="name">Businessman's Son Abducted</h2>
+        <h6 class="des">A 9-year-old was kidnapped for ransom in Gujarat; rescued in 72 hours.</h6>
+        <button class="watchlist-btn">View Details</button>
+      </div>
+    </div>  
+    </div>
+  </div>
+
+  
+
+  <!-- Popular Shows -->
+
+  <h1 class="title" id="pending-cases">Pending cases</h1>
+  <div class="movies-list">
+    <button class="pre-btn"><img src="images/pre.png" alt=""></button>
+    <button class="nxt-btn"><img src="images/nxt.png" alt=""></button>
+    <div class="card-container">
+
+      <div class="card" onclick="goToDetails('68406c52363dbcb7b3d8d882')">
+      <img src="images/kidnapped.jpg" alt="Techie Kidnapping" class="card-img">
+      <div class="card-body">
+        <h2 class="name">Techie Kidnapped in Bengaluru</h2>
+        <h6 class="des">A software engineer was abducted for ransom by former colleagues.</h6>
+        <button class="watchlist-btn">View Details</button>
+      </div>
+    </div>
+
+      <div class="card" onclick="goToDetails('6841a60edaa342e4c266dd26')">
+      <img src="images/atmskimming.jpg" alt="ATM Skimming Ring" class="card-img">
+      <div class="card-body">
+        <h2 class="name">ATM Skimming Fraud</h2>
+        <h6 class="des">Over 300 people lost money across metro cities through cloned cards.</h6>
+        <button class="watchlist-btn">View Details</button>
+      </div>
+    </div>
+
+    <div class="card" onclick="goToDetails('68406cfb363dbcb7b3d8d883')">
+      <img src="images/blackmailing.jpg" alt="Online Sextortion Racket" class="card-img">
+      <div class="card-body">
+        <h2 class="name">Sextortion Racket Busted</h2>
+        <h6 class="des">Cyber police tracked and arrested a gang blackmailing men via video calls.</h6>
+        <button class="watchlist-btn">View Details</button>
+      </div>
+    </div>
+
+
+      <div class="card" onclick="goToDetails('68406b54363dbcb7b3d8d881')">
+      <img src="images/unaorape.jpg" alt="Unnao Rape Case" class="card-img">
+      <div class="card-body">
+        <h2 class="name">Unnao Rape Case</h2>
+        <h6 class="des">Involving a BJP MLA; victim was later critically injured in a car accident.</h6>
+        <button class="watchlist-btn">View Details</button>
+      </div>
+    </div>
+
+      <div class="card" onclick="goToDetails('68406930363dbcb7b3d8d880')">
+      <img src="images/hathrasrape.jpg" alt="Hathras Case" class="card-img">
+      <div class="card-body">
+        <h2 class="name">Hathras Rape (2020)</h2>
+        <h6 class="des">Dalit girl gang-raped, triggering nationwide protests on caste and gender violence.</h6>
+        <button class="watchlist-btn">View Details</button>
+      </div>
+    </div>
+
+      <div class="card" onclick="goToDetails('684068ab363dbcb7b3d8d87f')">
+      <img src="images/shradhamurder.jpg" alt="Shraddha Walkar Case" class="card-img">
+      <div class="card-body">
+        <h2 class="name">Shraddha Murder Case</h2>
+        <h6 class="des">Aftab killed and chopped up his live-in partner; stored body parts in fridge.</h6>
+        <button class="watchlist-btn">View Details</button>
+      </div>
+    </div>
+
+    <div class="card" onclick="goToDetails('68406797363dbcb7b3d8d87e')">
+      <img src="images/jessicamurder.jpg" alt="Jessica Lal Case" class="card-img">
+      <div class="card-body">
+        <h2 class="name">Jessica Lal Murder</h2>
+        <h6 class="des">Model shot dead by a politician's son in Delhi in 1999; case took years for justice.</h6>
+        <button class="watchlist-btn">View Details</button>
+      </div>
+    </div>
+
+       <div class="card" onclick="goToDetails('68406708363dbcb7b3d8d87d')">
+      <img src="images/pnbrobbery.jpg" alt="Punjab Bank Robbery" class="card-img">
+      <div class="card-body">
+        <h2 class="name">Punjab Bank Robbery</h2>
+        <h6 class="des">A gang drilled into a bank vault, stole over ₹10 crore worth of cash & gold.</h6>
+        <button class="watchlist-btn">View Details</button>
+      </div>
+    </div>
+
+    <div class="card" onclick="goToDetails('6840668a363dbcb7b3d8d87c')">
+      <img src="images/angadiarobbery.jpg" alt="Delhi Angadia Heist" class="card-img">
+      <div class="card-body">
+        <h2 class="name">Angadia Robbery</h2>
+        <h6 class="des">Over ₹4 crore stolen from Angadia firm near Delhi's Chandni Chowk.</h6>
+        <button class="watchlist-btn">View Details</button>
+      </div>
+    </div>
+
+    <div class="card" onclick="goToDetails('6840609f363dbcb7b3d8d87a')">
+      <img src="images/businessmankidnapped.jpg" alt="Krishna Abduction" class="card-img">
+      <div class="card-body">
+        <h2 class="name">Kanpur Businessman's Kidnapping</h2>
+        <h6 class="des">Transporter abducted by gang posing as tax officers; found dead in river.</h6>
+        <button class="watchlist-btn">View Details</button>
+      </div>
+    </div>
+
+    </div>
+  </div>
+
+  
+<h1 class="title" id="closed-cases">Closed cases</h1>
+<div class="movies-list">
+  <button class="pre-btn"><img src="images/pre.png" alt="Previous"></button>
+  <button class="nxt-btn"><img src="images/nxt.png" alt="Next"></button>
+
+  <!-- Add this wrapper back -->
+  <div class="card-container">
+    <div class="card" onclick="goToDetails('684061df363dbcb7b3d8d87b')">
+      <img src="images/sbirobbery.jpg" alt="Bank Robbery in Bhubaneswar" class="card-img">
+      <div class="card-body">
+        <h2 class="name">Bank Robbery in Bhubaneswar</h2>
+        <h6 class="des">A major bank robbery at SBI Janpath branch; police are investigating.</h6>
+        <button class="watchlist-btn">View Details</button>
+      </div>
+    </div>
+
+
+    <div class="card" onclick="goToDetails('68405f34363dbcb7b3d8d879')">
+      <img src="images/doublemurder.jpg" alt="Double Murder in Cuttack" class="card-img">
+      <div class="card-body">
+        <h2 class="name">Double Murder in Cuttack</h2>
+        <h6 class="des">Two individuals found dead in a suspected family dispute case.</h6>
+        <button class="watchlist-btn">View Details</button>
+      </div>
+    </div>
+
+    <div class="card" onclick="goToDetails('68405ead363dbcb7b3d8d878')">
+      <img src="images/childtrafficking.jpg" alt="Child Trafficking" class="card-img">
+      <div class="card-body">
+        <h2 class="name">Child Trafficking Network Busted</h2>
+        <h6 class="des">Police are investigating a trafficking ring in Rourkela city.</h6>
+        <button class="watchlist-btn">View Details</button>
+      </div>
+    </div>
+
+    <div class="card" onclick="goToDetails('68405e0d363dbcb7b3d8d877')">
+      <img src="images/manstangled.jpg" alt="Man Strangles Wife" class="card-img">
+      <div class="card-body">
+        <h2 class="name">Man Strangles Wife in Bhubaneswar</h2>
+        <h6 class="des">Following a dispute, Gupteswar Behera allegedly killed his wife and left her body at a hospital.</h6>
+        <button class="watchlist-btn">View Details</button>
+      </div>
+    </div>
+
+    <div class="card" onclick="goToDetails('68405d8c363dbcb7b3d8d876')">
+      <img src="images/elderymanrape.jpg" alt="Elderly Man Rape Case" class="card-img">
+      <div class="card-body">
+        <h2 class="name">Elderly Man Rapes 9-Year-Old</h2>
+        <h6 class="des">A 70-year-old man was sentenced to 20 years in Kendrapada district.</h6>
+        <button class="watchlist-btn">View Details</button>
+      </div>
+    </div>
+
+    <div class="card" onclick="goToDetails('68405c9d363dbcb7b3d8d875')">
+      <img src="images/armtrafficking.jpg" alt="Arms Trafficking" class="card-img">
+      <div class="card-body">
+        <h2 class="name">Six Arrested for Arms Trafficking</h2>
+        <h6 class="des">Police arrested six individuals during a raid in Prem Nagar, Rourkela.</h6>
+        <button class="watchlist-btn">View Details</button>
+      </div>
+    </div>
+
+    <div class="card" onclick="goToDetails('68405c42363dbcb7b3d8d874')">
+      <img src="images/ak47.jpg" alt="AK-47 Arrest" class="card-img">
+      <div class="card-body">
+        <h2 class="name">Maoist Caught with AK-47 in Koraput</h2>
+        <h6 class="des">Kunjam Hidma arrested with an AK-47 and ammunition.</h6>
+        <button class="watchlist-btn">View Details</button>
+      </div>
+    </div>
+
+    <div class="card" onclick="goToDetails('68405b9a363dbcb7b3d8d873')">
+      <img src="images/cyberfraud.jpg" alt="Cyber Fraud Case" class="card-img">
+      <div class="card-body">
+        <h2 class="name">Cyber Fraud: ₹1.08 Crore Scam</h2>
+        <h6 class="des">Two held for duping a trader via online gaming platforms.</h6>
+        <button class="watchlist-btn">View Details</button>
+      </div>
+    </div>
+
+    <div class="card" onclick="goToDetails('68405a73363dbcb7b3d8d872')">
+      <img src="images/chattishgarh.jpg" alt="Murder Inspired by Crime Shows" class="card-img">
+      <div class="card-body">
+        <h2 class="name">Inspired by Crime Shows: Murder Plan</h2>
+        <h6 class="des">Engineer hired killer to murder wife in Balod, Chhattisgarh.</h6>
+        <button class="watchlist-btn">View Details</button>
+      </div>
+    </div>
+
+    <div class="card" onclick="goToDetails('684054fe363dbcb7b3d8d871')">
+      <img src="images/pune.jpg" alt="Pune Teen Murder" class="card-img">
+      <div class="card-body">
+        <h2 class="name">Teen Murdered in Pune</h2>
+        <h6 class="des">17-year-old killed with a billhook over personal rivalry.</h6>
+        <button class="watchlist-btn">View Details</button>
+      </div>
+    </div>
+
+    <div class="card" onclick="goToDetails('6840527d363dbcb7b3d8d870')">
+      <img src="images/varanasi.jpg" alt="Gang Rape in Varanasi" class="card-img">
+      <div class="card-body">
+        <h2 class="name">Varanasi Gang-Rape Case</h2>
+        <h6 class="des">19-year-old gang-raped by 23 men over six days. Six arrested.</h6>
+        <button class="watchlist-btn">View Details</button>
+      </div>
+    </div>
+
+     <script>
+  function goToDetails(id) {
+    window.location.href = `case-details.html?id=${id}`;
+  }
+</script>
+
+  </div> <!-- End of card-container -->
+</div> <!-- End of movies-list -->
+
+
+
+      </section>
+      <!-- end of movie section -->
+    </div>
+  </div>
+  
+  
+
+
+
+</div>
+
+<div class="last-footer">
+    <div class="last-footer-texts">
+        <h3>© 2025 CrimeFiles. All Rights Reserved.</H3>
+        <div class="last-footer-links">
+            <a href="#">Terms Of Use</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">FAQ</a>
+        </div>
+    </div>
+    <div class="last-footer-images">
+        <a href="#"><img src="images/google-playstore.webp" class="dwn" alt=""></a>
+        <a href="#"><img src="images/ios-appstore.webp" class="dwn" alt=""></a>
+    </div>
+</div>
+
+<script src="search.js"></script>
+ 
+  <script src="script.js"></script>
+  
+</body>
+
+
+
+</html>

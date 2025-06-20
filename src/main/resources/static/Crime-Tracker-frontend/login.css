@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.background {
+  background-image: url('images/loginpagebg.jpg'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 40px;
+  width: 300px;
+  border-radius: 8px;
+  color: white;
+  z-index: 1;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 4px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #e50914;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.login-btn:hover {
+  background-color: #b20710; /* darker red on hover */
+}
+.options {
+  margin-top: 10px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.register-link {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+}

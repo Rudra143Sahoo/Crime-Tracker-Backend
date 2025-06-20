@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Case Hub - Updates</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="check.css">
+</head>
+<body class="body-bg">
+
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="#" class="site-logo"><i class="fas fa-gavel"></i></a>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search cases, reports, or individuals..." class="search-input">
+            </div>
+        </div>
+
+        <div class="navbar-center">
+            <a href="#" class="nav-icon-item active" title="Home"><i class="fas fa-home"></i><span>Home</span></a>
+            <a href="#" class="nav-icon-item" title="My Network"><i class="fas fa-users"></i><span>Network</span></a>
+            <a href="#" class="nav-icon-item" title="Posts"><i class="fas fa-file-alt"></i><span>Posts</span></a>
+            <a href="#" class="nav-icon-item" title="Messages"><i class="fas fa-comment-dots"></i><span>Messages</span></a>
+            <a href="#" class="nav-icon-item" title="Notifications"><i class="fas fa-bell"></i><span>Notifications<span class="notification-badge">3</span></span></a>
+        </div>
+
+        <div class="navbar-right">
+            <div class="profile-dropdown">
+                <button class="profile-btn">
+                    <img src="https://placehold.co/40x40/FF5733/FFFFFF?text=P" alt="Profile" class="profile-img">
+                    <span class="profile-name">Me <i class="fas fa-caret-down"></i></span>
+                </button>
+                <div class="dropdown-content">
+                    <div class="dropdown-profile-summary">
+                        <img src="https://placehold.co/50x50/FF5733/FFFFFF?text=P" alt="Profile" class="dropdown-profile-img">
+                        <div>
+                            <p class="dropdown-profile-name">User Name</p>
+                            <p class="dropdown-profile-title">Case Investigator | Crime Analyst</p>
+                        </div>
+                    </div>
+                    <a href="#" class="view-profile-link">View Profile</a>
+                    <hr>
+                    <a href="#">Settings & Privacy</a>
+                    <a href="#">Help</a>
+                    <a href="#">Language</a>
+                    <hr>
+                    <a href="login.html" class="logout-link">Sign Out</a>
+                </div>
+            </div>
+            <a href="#" class="premium-link">
+                <i class="fas fa-crown"></i> Get Premium
+            </a>
+        </div>
+    </nav>
+
+    <div class="main-container">
+
+        <aside class="sidebar-left">
+            <div class="profile-card">
+                <div class="profile-card-header">
+                    <img src="https://placehold.co/600x120/E0E0E0/333333?text=Background" alt="Background" class="profile-bg">
+                    <img src="https://placehold.co/80x80/FF5733/FFFFFF?text=P" alt="Profile" class="profile-card-img">
+                </div>
+                <div class="profile-card-body">
+                    <h3 class="profile-card-name">Rudra Pratap Sa...</h3>
+                    <p class="profile-card-title">Crime Analyst | Cyber Security Expert</p>
+                    <p class="profile-card-location">Bhubaneswar, Odisha</p>
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <span>Profile views</span>
+                            <span class="stat-value">36</span>
+                        </div>
+                        <div class="stat-item">
+                            <span>Post impressions</span>
+                            <span class="stat-value">48</span>
+                        </div>
+                    </div>
+                    <a href="#" class="premium-trial">Access exclusive tools & insights<br>Try Premium for free</a>
+                </div>
+            </div>
+
+            <div class="sidebar-block">
+                <ul class="nav-list">
+                    <li><a href="#" class="nav-item"><i class="fas fa-bookmark"></i><span>Saved Items</span></a></li>
+                    <li><a href="#" class="nav-item"><i class="fas fa-users"></i><span>Groups</span></a></li>
+                    <li><a href="#" class="nav-item"><i class="fas fa-newspaper"></i><span>Newsletters</span></a></li>
+                    <li><a href="#" class="nav-item"><i class="fas fa-calendar-alt"></i><span>Events</span></a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="content">
+            <div class="create-post-section">
+                <div class="post-header-top">
+                    <img src="https://placehold.co/40x40/FF5733/FFFFFF?text=P" alt="Your Profile" class="post-pic">
+                    <input type="text" placeholder="Start a post" class="post-input-field">
+                </div>
+                <div class="post-options">
+                    <button class="option-btn"><i class="fas fa-image"></i>Photo</button>
+                    <button class="option-btn"><i class="fas fa-video"></i>Video</button>
+                    <button class="option-btn"><i class="fas fa-calendar-alt"></i>Event</button>
+                    <button class="option-btn"><i class="fas fa-edit"></i>Write article</button>
+                </div>
+            </div>
+
+            <div class="feed-filter">
+                <div class="filter-line"></div>
+                <span class="filter-text">Sort by: <span class="filter-value">Top <i class="fas fa-caret-down"></i></span></span>
+            </div>
+
+            <div id="newsfeed" class="feed">
+                <div class="feed-post">
+                    <div class="post-header">
+                        <img src="https://placehold.co/48x48/6B46C1/FFFFFF?text=A" class="post-avatar">
+                        <div>
+                            <p class="post-author">Admin Team <span class="dot-separator">·</span> <span class="follow-btn">Follow</span></p>
+                            <p class="post-meta">Official CrimeCase Hub Admin <span class="dot-separator">·</span> 2 hours ago</p>
+                        </div>
+                        <button class="more-options-btn"><i class="fas fa-ellipsis-h"></i></button>
+                    </div>
+                    <h3 class="post-heading">Investigation Update: "Missing Artifacts" Case (Case ID: #2023-001)</h3>
+                    <p class="post-text">Significant progress has been made in the "Missing Artifacts" case. Our forensic team has identified new leads, and a suspect has been brought in for questioning. More details will be released as the investigation proceeds. Stay tuned for further updates.</p>
+                    <img src="https://placehold.co/600x350/0891B2/FFFFFF?text=FORENSIC+EVIDENCE" class="post-img">
+                    <div class="post-actions">
+                        <div class="likes-comments-count">
+                            <i class="fas fa-thumbs-up"></i> <span>1.2K</span> <span class="dot-separator">·</span> <span>12 Comments</span> <span class="dot-separator">·</span> <span>3 Shares</span>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="action-btn"><i class="fas fa-thumbs-up"></i>Like</button>
+                            <button class="action-btn"><i class="fas fa-comment-dots"></i>Comment</button>
+                            <button class="action-btn"><i class="fas fa-share"></i>Share</button>
+                            <button class="action-btn"><i class="fas fa-paper-plane"></i>Send</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feed-post">
+                    <div class="post-header">
+                        <img src="https://placehold.co/48x48/C53030/FFFFFF?text=R" class="post-avatar">
+                        <div>
+                            <p class="post-author">Reporter Jane Doe <span class="dot-separator">·</span> <span class="follow-btn">Follow</span></p>
+                            <p class="post-meta">Investigative Journalist at CrimeWatch <span class="dot-separator">·</span> 5 hours ago</p>
+                        </div>
+                        <button class="more-options-btn"><i class="fas fa-ellipsis-h"></i></button>
+                    </div>
+                    <h3 class="post-heading">Public Advisory: Recent Burglary Spikes in City Center</h3>
+                    <p class="post-text">Local police are advising residents in the City Center area to remain vigilant following a notable increase in residential burglaries over the past two weeks. Authorities urge everyone to secure their homes, report suspicious activities, and consider installing security systems. Community watch meetings are being organized.</p>
+                    <img src="https://placehold.co/600x350/9F7AEA/FFFFFF?text=CITY+CENTER+BURGLARY" class="post-img">
+                    <div class="post-actions">
+                        <div class="likes-comments-count">
+                            <i class="fas fa-thumbs-up"></i> <span>850</span> <span class="dot-separator">·</span> <span>25 Comments</span> <span class="dot-separator">·</span> <span>10 Shares</span>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="action-btn"><i class="fas fa-thumbs-up"></i>Like</button>
+                            <button class="action-btn"><i class="fas fa-comment-dots"></i>Comment</button>
+                            <button class="action-btn"><i class="fas fa-share"></i>Share</button>
+                            <button class="action-btn"><i class="fas fa-paper-plane"></i>Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <aside class="sidebar-right">
+            <div class="sidebar-block news-block">
+                <h3>LinkedIn News <i class="fas fa-info-circle"></i></h3>
+                <ul class="news-list">
+                    <li>
+                        <p class="news-title">Nippon seals $14B US deal</p>
+                        <p class="news-meta">3h ago <span class="dot-separator">·</span> 122,511 readers</p>
+                    </li>
+                    <li>
+                        <p class="news-title">India, Canada reset diplomatic ties</p>
+                        <p class="news-meta">1d ago <span class="dot-separator">·</span> 1,635 readers</p>
+                    </li>
+                    <li>
+                        <p class="news-title">Big Four goes big on hiring</p>
+                        <p class="news-meta">12h ago <span class="dot-separator">·</span> 2,720 readers</p>
+                    </li>
+                    <li>
+                        <p class="news-title">More recruiters get AI savvy</p>
+                        <p class="news-meta">10h ago <span class="dot-separator">·</span> 4,615 readers</p>
+                    </li>
+                    <li>
+                        <p class="news-title">Pay gap widens in IT</p>
+                        <p class="news-meta">19h ago <span class="dot-separator">·</span> 1,743 readers</p>
+                    </li>
+                </ul>
+                <button class="show-more-news">Show more <i class="fas fa-chevron-down"></i></button>
+            </div>
+
+            <div class="sidebar-block promoted-block">
+                <h3>Promoted</h3>
+                <a href="#" class="promoted-ad">
+                    <img src="https://placehold.co/300x150/0077B5/FFFFFF?text=AD+SPACE" alt="Promoted Ad" class="ad-image">
+                    <p class="ad-text">See who's hiring on LinkedIn.</p>
+                </a>
+            </div>
+        </aside>
+
+    </div>
+
+    <script src="landingpage.js"></script>
+    <script>
+        // Example for showing/hiding login/logout buttons
+        // In a real application, this would be determined by user authentication state
+        const isLoggedIn = true; // This would come from your backend/session
+
+        const loginBtn = document.querySelector('.login-btn');
+        const logoutBtn = document.querySelector('.logout-btn');
+        const profileNameElement = document.getElementById('profileName');
+
+        if (isLoggedIn) {
+            // loginBtn.style.display = 'none'; // Login button is not used in the new navbar structure
+            // logoutBtn.style.display = 'flex'; // The logout link is now part of the profile dropdown
+            // profileNameElement.textContent = 'User Name'; // Set actual user name
+        } else {
+            // loginBtn.style.display = 'flex';
+            // logoutBtn.style.display = 'none';
+            // profileNameElement.textContent = 'Profile';
+        }
+
+        // Dropdown functionality (simple example)
+        document.querySelector('.profile-btn').addEventListener('click', function() {
+            document.querySelector('.dropdown-content').classList.toggle('show');
+        });
+
+        // Close the dropdown if the user clicks outside of it
+        window.addEventListener('click', function(event) {
+            if (!event.target.matches('.profile-btn') && !event.target.closest('.profile-btn')) {
+                const dropdowns = document.getElementsByClassName("dropdown-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+.register-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 40px;
+  width: 300px;
+  border-radius: 8px;
+  color: white;
+  z-index: 1;
+}
+
+.register-box h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.register-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 4px;
+}
+
+.register-box .login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #e50914;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-link {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.background {
+  background-image: url('images/registerbgimage.jpg'); /* Replace with your image name and extension */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}

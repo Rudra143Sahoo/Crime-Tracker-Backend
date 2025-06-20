@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report a Crime Case</title>
+    <link rel="stylesheet" href="casefeed.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Report a Crime Case</h2>
+        <form id="crimeCaseForm" action="/submit_case" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="caseTitle">Case Title:</label>
+                <input type="text" id="caseTitle" name="caseTitle" required>
+            </div>
+
+            <div class="form-group">
+                <label for="caseDescription">Case Description:</label>
+                <textarea id="caseDescription" name="caseDescription" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="caseLocation">Case Location:</label>
+                <input type="text" id="caseLocation" name="caseLocation" required>
+            </div>
+
+            <div class="form-group">
+                <label for="caseImage">Upload Image (Optional):</label>
+                <input type="file" id="caseImage" name="caseImage" accept="image/*">
+            </div>
+
+            <button type="submit">Submit Case</button>
+        </form>
+    </div>
+
+    <script src="casefeed.js"></script>
+</body>
+</html>

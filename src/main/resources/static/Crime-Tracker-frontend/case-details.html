@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crime Case Details</title>
+  <link rel="stylesheet" href="case-details.css">
+</head>
+<body>
+  <div class="container">
+    <!-- <div class="main-image-section">
+      <a id="videoLink" href="#" target="_blank" rel="noopener noreferrer" class="video-link">
+        <img id="mainImage" src="" alt="Crime Scene">
+        <div class="play-button">&#9658;</div>
+      </a>
+      <div class="side-images">
+        <img id="image1" src="" alt="Side Image 1">
+        <img id="image2" src="" alt="Side Image 2">
+      </div>
+    </div> -->
+    <!-- <div class="container"> -->
+    <div class="main-image-section">
+        <div class="horizontal-images">
+            <img id="mainImage" src="" alt="Crime Scene">
+            <img id="image1" src="" alt="Side Image 1">
+            <img id="image2" src="" alt="Side Image 2">
+        </div>
+    </div>
+
+    <!-- <div class="case-info">
+        </div> -->
+<!-- </div> -->
+
+    <div class="case-info">
+      <div class="left-column">
+        <span class="category-tag" id="caseType">Case</span>
+        <h1 id="title">Loading...</h1>
+        <p class="location" id="location"></p>
+
+        <section>
+          <h3>Case Summary</h3>
+          <p><strong>Date:</strong> <span id="dateOfIncident"></span></p>
+          <p><strong>Time:</strong> <span id="timeOfCrime"></span></p>
+          <p><strong>Status:</strong> <span id="caseStatus"></span></p>
+          <p><strong>Method:</strong> <span id="crimeMethod"></span></p>
+        </section>
+
+        <section>
+          <h3>Details</h3>
+          <p id="caseDetails"></p>
+        </section>
+
+        <section>
+          <h3>Investigation</h3>
+          <p id="investigationDetails"></p>
+        </section>
+
+        <section>
+          <h3>Charges Filed</h3>
+          <p id="chargesFiled"></p>
+        </section>
+
+        <section>
+          <h3>Police Station</h3>
+          <p id="policeStation"></p>
+        </section>
+
+        <section>
+          <h3>Suspects</h3>
+          <ul id="suspectList"></ul>
+        </section>
+
+        <section>
+          <h3>Victims</h3>
+          <ul id="victimList"></ul>
+        </section>
+
+        <section>
+          <h3>Security Lapses</h3>
+          <ul id="securityLapses"></ul>
+        </section>
+
+        <section>
+          <h3>Media Coverage</h3>
+          <ul id="mediaCoverage"></ul>
+        </section>
+      </div>
+
+      <div class="right-column">
+  <div class="features-box">
+    <h4>Case Features</h4>
+    <p><strong>Case ID:</strong> <span id="caseId"></span></p>
+    <p><strong>FIR Number:</strong> <span id="firNumber"></span></p>
+    <p><strong>Court Proceedings:</strong> <span id="courtProceedings"></span></p>
+    <p><strong>Investigating Officer:</strong> <span id="investigatingOfficer"></span></p>
+  </div>
+
+  <!-- Add Video Evidence section here -->
+  <div class="video-evidence-box" style="margin-top:20px;">
+    <h4>Video Evidence</h4>
+    <a id="videoEvidenceLink" href="#" target="_blank" rel="noopener noreferrer" style="color:#1a73e8; font-weight:bold;">
+      Watch Video
+    </a>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+  <script src="details.js"></script>
+</body>
+</html>

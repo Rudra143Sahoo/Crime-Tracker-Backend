@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Case Updates - Homepage</title>
+    <link rel="stylesheet" href="landingpage.css">
+</head>
+<body class="body-bg">
+
+    <!-- Header Section -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <i class="icon-gavel"></i>
+            <h1 class="site-title">CrimeCase Hub</h1>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search cases, reports, or individuals..." class="search-input">
+            <i class="icon-search"></i>
+        </div>
+
+        <div class="navbar-right">
+            <button class="notification-btn">
+                <i class="icon-bell"></i>
+                <span class="notification-badge">3</span>
+            </button>
+         <a href="login.html" class="login-btn">
+    <i class="icon-login"></i>
+    <span>Login</span>
+</a>
+
+<button class="logout-btn" style="display: none;">
+    <i class="icon-logout"></i>
+    <span>Logout</span>
+</button>
+
+            <button class="profile-btn">
+                <img src="https://placehold.co/40x40/FF5733/FFFFFF?text=P" alt="Profile" class="profile-img">
+                <span class="profile-name" id="profileName">Profile</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="main-container">
+
+        <!-- Left Sidebar -->
+        <aside class="sidebar-left">
+            <ul class="nav-list">
+                <li><a href="#" class="nav-item"><i class="icon-home"></i><span>Home</span></a></li>
+                <li><a href="#" class="nav-item"><i class="icon-user"></i><span>Profile</span></a></li>
+                <!-- <li><a href="#" class="nav-item"><i class="icon-explore"></i><span>Explore</span></a></li> -->
+                 <li>
+                 <a href="index.html" class="nav-item">
+                  <i class="icon-explore"></i>
+                 <span>Explore</span>
+                </a>
+               </li>
+
+                <li><a href="#" class="nav-item"><i class="icon-map"></i><span>Nearby Incidents</span></a></li>
+                <li><a href="#" class="nav-item"><i class="icon-stats"></i><span>Crime Statistics</span></a></li>
+            </ul>
+
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Report a Crime</a></li>
+                    <li><a href="#">Cold Cases</a></li>
+                    <li><a href="#">Legal Resources</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Feed -->
+        <main class="content">
+            <!-- <div class="post-box">
+                <h2>Post a New Case Update</h2>
+                <input type="text" placeholder="Case Title/Headline" class="post-title">
+                <textarea placeholder="Details of the case update..." class="post-details"></textarea>
+                <input type="text" placeholder="Optional: Image URL" class="post-image-url">
+                <button class="post-btn">Share Update</button>
+            </div> -->
+<div class="post-wrap">
+    <div class="post-head">
+        <img src="https://placehold.co/40x40/FF5733/FFFFFF?text=P" alt="Your Profile" class="post-pic">
+        
+        <a href="casefeed.html" class="post-input-link">
+            <input type="text" placeholder="upload an incident from your locality" class="post-input" readonly>
+        </a>
+        </div>
+
+    <div class="post-sep"></div>
+
+    <div class="post-opts">
+        <button class="post-btn">
+            <i class="fas fa-video" style="color: #f02849;"></i> <span>Live video</span>
+        </button>
+        <label for="media-file" class="post-btn">
+            <i class="fas fa-image" style="color: #45bd62;"></i> <span>Photo/video</span>
+            <input type="file" accept="image/*,video/*" class="post-file-input" id="media-file" style="display: none;">
+        </label>
+        <button class="post-btn">
+            <i class="fas fa-laugh" style="color: #f7b928;"></i> <span>Feeling/activity</span>
+        </button>
+    </div>
+</div>
+
+            <div id="newsfeed" class="feed">
+                <div class="feed-post">
+                    <div class="post-header">
+                        <img src="https://placehold.co/48x48/6B46C1/FFFFFF?text=A" class="post-avatar">
+                        <div>
+                            <p class="post-author">Admin Team</p>
+                            <p class="post-time">2 hours ago</p>
+                        </div>
+                    </div>
+                    <h3 class="post-heading">Investigation Update: "Missing Artifacts" Case (Case ID: #2023-001)</h3>
+                    <p class="post-text">Significant progress has been made in the "Missing Artifacts" case...</p>
+                    <img src="https://placehold.co/600x400/0891B2/FFFFFF?text=FORENSIC+EVIDENCE" class="post-img">
+                    <div class="post-footer">
+                        <span>12 Comments</span>
+                        <span>3 Shares</span>
+                    </div>
+                </div>
+
+                <div class="feed-post">
+                    <div class="post-header">
+                        <img src="https://placehold.co/48x48/C53030/FFFFFF?text=R" class="post-avatar">
+                        <div>
+                            <p class="post-author">Reporter Jane Doe</p>
+                            <p class="post-time">5 hours ago</p>
+                        </div>
+                    </div>
+                    <h3 class="post-heading">Public Advisory: Recent Burglary Spikes in City Center</h3>
+                    <p class="post-text">Local police are advising residents in the City Center...</p>
+                    <img src="https://placehold.co/600x400/9F7AEA/FFFFFF?text=CITY+CENTER+BURGLARY" class="post-img">
+                    <div class="post-footer">
+                        <span>25 Comments</span>
+                        <span>10 Shares</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="sidebar-right">
+            <h2>Related Cases & Trends</h2>
+            <div class="related-case">
+                <img src="https://placehold.co/60x60/D97706/FFFFFF?text=CASE" class="related-img">
+                <div>
+                    <p class="related-title">The Riverside Robbery</p>
+                    <p class="related-text">New evidence emerged.</p>
+                    <a href="#" class="related-link">View Details</a>
+                </div>
+            </div>
+
+            <div class="related-case">
+                <img src="https://placehold.co/60x60/10B981/FFFFFF?text=ALERT" class="related-img">
+                <div>
+                    <p class="related-title">Cybersecurity Breach</p>
+                    <p class="related-text">Arrests made.</p>
+                    <a href="#" class="related-link">View Details</a>
+                </div>
+            </div>
+
+            <div class="trending-topics">
+                <h3>Trending Topics</h3>
+                <ul>
+                    <li>#LocalCrimeWatch</li>
+                    <li>#ForensicScience</li>
+                    <li>#JusticeForAll</li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <script src="landingpage.js"></script>
+    <!-- <script>
+    match = true
+    if(match) {
+      //
+      return
+    }
+
+    window.location.replace("/login.html")
+  </script> -->
+</body>
+</html>
