@@ -37,7 +37,8 @@ document.getElementById('registerForm').addEventListener('submit', async functio
 
     try {
         // Step 1: Fetch the CSRF token from the backend
-        const csrfResponse = await fetch('http://localhost:8080/api/auth/csrf-check', {
+        //const csrfResponse = await fetch('http://localhost:8080/api/auth/csrf-check', {
+			const csrfResponse = await fetch('/api/auth/csrf-check', {
             method: 'GET',
             credentials: 'include' // <--- THIS IS THE CRITICAL ADDITION
         });
@@ -54,7 +55,8 @@ document.getElementById('registerForm').addEventListener('submit', async functio
         console.log("CSRF Header Name:", csrfHeaderName);
 
         // Step 2: Send the registration request with the CSRF token in the header
-        const registerResponse = await fetch('http://localhost:8080/api/auth/register', {
+       // const registerResponse = await fetch('http://localhost:8080/api/auth/register', {
+		const registerResponse = await fetch('/api/auth/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
