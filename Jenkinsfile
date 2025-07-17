@@ -5,7 +5,8 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 echo "📥 Cloning repository..."
-                git url: 'https://github.com/Rudra143Sahoo/Crime-Tracker-Backend.git', credentialsId: 'github-token'
+           echo "✅ Repository already checked out by Jenkins."
+
             }
         }
 
