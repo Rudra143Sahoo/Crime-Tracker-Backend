@@ -1,0 +1,20 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:latest
+    container_name: crimecase-mongodb
+    ports:
+      - "27017:27017"
+
+  app:
+    build: .
+    container_name: crimecase-backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongo
+    environment:
+      - SPRING_DATA_MONGODB_URI=mongodb://mongo:27017/crimeDB
+      - SPRING_DATA_MONGODB_DATABASE=crimeDB

@@ -513,7 +513,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     // This assumes your Spring Boot /api/auth/csrf-check endpoint returns JSON
     // with 'token' and 'headerName' fields.
     try {
-        const csrfResponse = await fetch('http://localhost:8080/api/auth/csrf-check', {
+        //const csrfResponse = await fetch('http://localhost:8080/api/auth/csrf-check', {
+			const csrfResponse = await fetch('/api/auth/csrf-check', {
             method: 'GET',
             credentials: 'include' // Important for associating with the session and getting the cookie
         });
@@ -570,7 +571,8 @@ document.addEventListener("DOMContentLoaded", async function () {
                 // Dynamically set the CSRF header using the name received from the API
                 headers[csrfHeaderName] = csrfTokenValue;
 
-                const response = await fetch('http://localhost:8080/api/auth/login', {
+               // const response = await fetch('http://localhost:8080/api/auth/login', {
+				const response = await fetch('/api/auth/login', {
                     method: 'POST',
                     headers: headers,
                     credentials: 'include', // Ensure cookies (like JSESSIONID) are sent
