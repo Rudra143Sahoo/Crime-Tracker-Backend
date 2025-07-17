@@ -12,7 +12,8 @@ pipeline {
         stage('Build Java Project') {
             steps {
                 echo "⚙️ Building Java project using Maven..."
-                bat 'mvn clean package -DskipTests'
+                bat '.\\mvnw.cmd clean package -DskipTests'
+
             }
         }
 
