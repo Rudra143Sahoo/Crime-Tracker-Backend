@@ -29,11 +29,14 @@ pipeline {
 
         stage('Deploy with Docker Compose') {
             steps {
-                echo "🚀 Removing old containers if they exist..."
-                bat 'docker-compose down || exit 0'
+               echo "🧹 Forcibly removing existing MongoDB container if it exists..."
+        bat 'docker rm -f crimecase-mongodb || exit 0'
 
-               echo "🚀 Starting containers..."
-               bat 'docker-compose up -d --remove-orphans'
+        echo "🔻 Stopping and cleaning up previous containers..."
+        bat 'docker-compose down || exit 0'
+
+        echo "🚀 Starting fresh containers..."
+        bat 'docker-compose up -d --remove-orphans
             }
         }
     }
