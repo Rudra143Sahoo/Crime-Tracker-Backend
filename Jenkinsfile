@@ -5,8 +5,14 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 echo "📥 Cloning repository..."
-           echo "✅ Repository already checked out by Jenkins."
+                echo "✅ Repository already checked out by Jenkins."
+            }
+        }
 
+        stage('Build Java Project') {
+            steps {
+                echo "⚙️ Building Java project using Maven..."
+                bat 'mvn clean package -DskipTests'
             }
         }
 
