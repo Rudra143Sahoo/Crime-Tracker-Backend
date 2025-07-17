@@ -31,6 +31,9 @@ pipeline {
                 echo "🧹 Forcibly removing existing MongoDB container if it exists..."
                 bat 'docker rm -f crimecase-mongodb || exit 0'
 
+                echo "🗑️ Forcibly removing existing backend container if it exists..."
+                bat 'docker rm -f crimecase-backend || exit 0'
+
                 echo "🔻 Stopping and cleaning up previous containers..."
                 bat 'docker-compose down || exit 0'
 
