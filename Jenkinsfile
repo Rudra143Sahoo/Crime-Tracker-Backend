@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 echo "📥 Cloning repository..."
-                git 'https://github.com/rudrapratapsahoo/crime-case-backend.git'
+                git branch: 'main', credentialsId: 'github-token', url: 'https://github.com/Rudra143Sahoo/Crime-Tracker-Backend.git'
             }
         }
 
@@ -36,5 +36,3 @@ pipeline {
         }
     }
 }
-
-
