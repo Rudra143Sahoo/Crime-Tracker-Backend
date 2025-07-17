@@ -13,7 +13,6 @@ pipeline {
             steps {
                 echo "⚙️ Building Java project using Maven..."
                 bat '.\\mvnw.cmd clean package -DskipTests'
-
             }
         }
 
@@ -29,14 +28,14 @@ pipeline {
 
         stage('Deploy with Docker Compose') {
             steps {
-               echo "🧹 Forcibly removing existing MongoDB container if it exists..."
-        bat 'docker rm -f crimecase-mongodb || exit 0'
+                echo "🧹 Forcibly removing existing MongoDB container if it exists..."
+                bat 'docker rm -f crimecase-mongodb || exit 0'
 
-        echo "🔻 Stopping and cleaning up previous containers..."
-        bat 'docker-compose down || exit 0'
+                echo "🔻 Stopping and cleaning up previous containers..."
+                bat 'docker-compose down || exit 0'
 
-        echo "🚀 Starting fresh containers..."
-        bat 'docker-compose up -d --remove-orphans
+                echo "🚀 Starting fresh containers..."
+                bat 'docker-compose up -d --remove-orphans'
             }
         }
     }
