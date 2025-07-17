@@ -5,24 +5,24 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 echo "📥 Cloning repository..."
-                git branch: 'main', credentialsId: 'github-token', url: 'https://github.com/Rudra143Sahoo/Crime-Tracker-Backend.git'
+                git url: 'https://github.com/Rudra143Sahoo/Crime-Tracker-Backend.git', credentialsId: 'github-token'
             }
         }
 
         stage('Build with Docker Compose') {
             steps {
                 echo "🔧 Stopping existing containers if any..."
-                sh 'docker-compose down || true'
+                bat 'docker-compose down || exit 0'
 
                 echo "🐳 Building Docker images..."
-                sh 'docker-compose build'
+                bat 'docker-compose build'
             }
         }
 
         stage('Deploy with Docker Compose') {
             steps {
                 echo "🚀 Starting containers..."
-                sh 'docker-compose up -d'
+                bat 'docker-compose up -d'
             }
         }
     }
