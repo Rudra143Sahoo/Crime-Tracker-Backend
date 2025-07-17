@@ -29,8 +29,11 @@ pipeline {
 
         stage('Deploy with Docker Compose') {
             steps {
-                echo "🚀 Starting containers..."
-                bat 'docker-compose up -d'
+                echo "🚀 Removing old containers if they exist..."
+                bat 'docker-compose down || exit 0'
+
+               echo "🚀 Starting containers..."
+               bat 'docker-compose up -d --remove-orphans'
             }
         }
     }
